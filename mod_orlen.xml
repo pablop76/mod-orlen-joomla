@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+    <name>Orlen Hurtowe ceny paliw</name>
+    <author>Paweł Półtoraczyk</author>
+    <version>1.0.0</version>
+    <description>Orlen - ceny paliw</description>
+    <files>
+        <filename>mod_orlen.xml</filename>
+        <filename module="mod_orlen">mod_orlen.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+        <folder>language</folder>
+        <filename>orlen.css</filename>
+		<filename>orlen.js</filename>
+    </files>
+      <config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="cache_time" type="list" default="240" label="MOD_ORLEN_CACHE_TIME" description="">
+					<option value="60">1</option>
+					<option value="120">2</option>
+					<option value="240">4</option>
+					<option value="360">6</option>
+				</field>
+			</fieldset>
+			<fieldset name="advanced">
+				<field
+                    name="layout"
+                    type="modulelayout"
+                    label="JFIELD_ALT_LAYOUT_LABEL"
+                    description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+                <field
+                    name="moduleclass_sfx"
+                    type="textarea" rows="3"
+                    label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                    description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+            </fieldset>
+		</fields>
+	</config>
+    <config>
+    </config>
+</extension>
